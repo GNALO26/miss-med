@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Netlify
+.netlify/
+
+# Local development
+public/logos/temp/
+public/candidates/temp/
+public/background/temp/
+
+# Temporary files
+tmp/
+temp/
+
+# Logs
+logs
+*.log
+
+# Backup files
+*.backup
+*.bak
+
+# Supabase local
+.supabase/
+supabase/migrations/
+supabase/seed.sql
+
+# Testing
+cypress/videos/
+cypress/screenshots/
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
