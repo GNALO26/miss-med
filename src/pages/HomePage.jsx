@@ -8,7 +8,7 @@ import {
 
 // Composants
 import Countdown from '../components/common/Countdown'
-import { CandidateCard } from '../components/voting/CandidateCard'
+import CandidateCard from '../components/voting/CandidateCard'
 import { useVoting } from '../contexts/VotingContext'
 import LoadingSpinner from '../components/common/LoadingSpinner'
 
