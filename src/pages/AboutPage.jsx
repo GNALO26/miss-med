@@ -23,7 +23,7 @@ const AboutPage = () => {
       photo: '/logos/guilok-photo.jpg',
       website: 'https://guilok.dev',
       email: 'contact@guilok.dev',
-      phone: '+229 XX XX XX XX'
+      phone: '+229 01 56 03 58 88'
     }
   ]
 
@@ -31,8 +31,8 @@ const AboutPage = () => {
     {
       icon: <Calendar className="text-primary-600" size={24} />,
       title: 'Date',
-      content: '31 Décembre 2024',
-      description: 'À partir de 19h00'
+      content: '24 Janvier 2026',
+      description: 'À partir de 18h00'
     },
     {
       icon: <MapPin className="text-secondary-600" size={24} />,
@@ -43,7 +43,7 @@ const AboutPage = () => {
     {
       icon: <Trophy className="text-accent-600" size={24} />,
       title: 'Édition',
-      content: 'Miss FSS 2024',
+      content: 'Miss FSS 2026',
       description: '10ème édition'
     },
     {
@@ -78,7 +78,7 @@ const AboutPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Miss FSS 2024
+              Miss FSS 2026
               <span className="block text-secondary-300">L'Événement Étudiant de l'Année</span>
             </h1>
 
@@ -178,7 +178,7 @@ const AboutPage = () => {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Découvrez les équipes dévouées qui travaillent sans relâche pour 
-              faire de Miss FSS 2024 un succès retentissant.
+              faire de Miss FSS 2026 un succès retentissant.
             </p>
           </div>
 
