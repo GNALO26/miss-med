@@ -46,10 +46,10 @@ const VotingPage = () => {
   }
 
   const calculateDaysUntilEnd = () => {
-    const eventDate = new Date('2024-12-31')
+    const eventDate = new Date('2026-01-23')
     const today = new Date()
     const diffTime = eventDate - today
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 14))
     setDaysUntilEnd(diffDays)
 
     // Hide results 14 days before event
