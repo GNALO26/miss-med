@@ -153,20 +153,7 @@ const ceremonyDate = import.meta.env.VITE_EVENT_CEREMONY_DATE || '2026-01-24T18:
               Une expérience de vote moderne, sécurisée et transparente conçue pour vous offrir le meilleur
             </p>
           </div>
-{/* Informations sur la cérémonie */}
-<div className="mt-6 bg-white/10 backdrop-blur-sm rounded-xl p-6">
-  <h3 className="text-xl font-bold text-white mb-4 text-center">
-    🎉 Cérémonie de remise des prix
-  </h3>
-  <div className="text-center text-white/90">
-    <div className="text-lg mb-2">
-      📅 Le 24 Janvier 2026 à 18h00
-    </div>
-    <div className="text-sm">
-      📍 Faculté des Sciences de Santé, Cotonou
-    </div>
-  </div>
-</div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div

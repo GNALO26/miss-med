@@ -12,8 +12,8 @@ const Header = () => {
   const { isAdmin, logout } = useAuth()
 
   const navItems = [
-    { name: 'Accueil', path: '/', icon: '🏠' },
-    { name: 'Voter', path: '/voting', icon: '🎯' },
+    { name: 'Accueil', path: '/', icon: '' },
+    { name: 'Voter', path: '/voting', icon: '' },
     { name: 'Billetterie', path: '/tickets', icon: '🎫' },
     { name: 'À Propos', path: '/about', icon: '📖' },
   ]
