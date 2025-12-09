@@ -57,7 +57,7 @@ const Header = () => {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-white group-hover:text-secondary-300 transition-colors">
-                  Miss FSS 2024
+                  Miss FSS 2026
                 </h1>
                 <p className="text-xs text-white/80">Faculté des Sciences de Santé</p>
               </div>
