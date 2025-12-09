@@ -119,7 +119,7 @@ const TicketsPage = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                Billetterie Miss FSS 2024
+                Billetterie Miss FSS 2026
               </h1>
               <p className="text-xl text-white/80 mb-6">
                 Réservez votre place pour la soirée de gala la plus attendue de l'année.
@@ -129,7 +129,7 @@ const TicketsPage = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2">
                   <Calendar className="text-secondary-300" size={20} />
-                  <span>31 Décembre 2024 • 19h00</span>
+                  <span>24 Janvier 2026 • 19h00</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="text-secondary-300" size={20} />
