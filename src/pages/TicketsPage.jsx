@@ -289,7 +289,7 @@ const TicketsPage = () => {
               <h3 className="font-bold text-gray-900">Paiement sécurisé</h3>
             </div>
             <p className="text-gray-600">
-              Toutes les transactions sont cryptées avec SSL. Vos informations bancaires sont protégées.
+              Toutes les transactions sont cryptées. Vos informations bancaires sont protégées.
             </p>
           </div>
           

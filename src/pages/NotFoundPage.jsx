@@ -36,7 +36,6 @@ const NotFoundPage = () => {
               </h1>
               <p className="text-xl text-white/80 max-w-2xl mx-auto">
                 Oups ! Il semble que la page que vous cherchez ait pris des vacances.
-                Peut-être qu'elle est en train de voter pour Miss FSS ?
               </p>
             </div>
           </div>

@@ -27,8 +27,8 @@ const SuccessPage = () => {
       navigator.share({
         title: isVote ? 'Je viens de voter pour Miss FSS !' : 'Je viens d\'acheter mon billet pour Miss FSS !',
         text: isVote 
-          ? `Je viens de voter pour ${candidateName} à l'élection Miss FSS 2024. Rejoignez-moi !`
-          : 'Je viens d\'acheter mon billet pour la soirée de gala Miss FSS 2024. Ça va être incroyable !',
+          ? `Je viens de voter pour ${candidateName} à l'élection Miss FSS 2026. Rejoignez-moi !`
+          : 'Je viens d\'acheter mon billet pour la soirée de gala Miss FSS 2026. Ça va être incroyable !',
         url: window.location.origin
       })
     }
@@ -140,7 +140,7 @@ const SuccessPage = () => {
                       <li>✓ Téléchargez votre billet PDF ci-dessus</li>
                       <li>✓ Présentez le billet à l'entrée le jour de l'événement</li>
                       <li>✓ Arrivez 30 minutes avant le début de la cérémonie</li>
-                      <li>✓ Ayez une pièce d'identité avec vous</li>
+                      <li>✓ Enregistrer votre billet</li>
                     </>
                   )}
                 </ul>

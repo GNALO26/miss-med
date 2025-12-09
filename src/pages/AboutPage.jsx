@@ -161,7 +161,7 @@ const AboutPage = () => {
               <p className="text-gray-700">
                 Chaque édition est l'occasion de récolter des fonds pour des causes 
                 caritatives, de renforcer les liens entre étudiants, et de créer 
-                des souvenirs inoubliables. Miss FSS 2024 promet d'être la plus 
+                des souvenirs inoubliables. Miss FSS 2026 promet d'être la plus 
                 grande édition jamais organisée.
               </p>
             </div>
@@ -208,7 +208,7 @@ const AboutPage = () => {
                   <p className="text-gray-700">
                     L'Association des Étudiants en Médecine de Cotonou (AEMC) est 
                     l'organisation étudiante leader de la faculté. Avec plus de 
-                    10 ans d'expérience dans l'organisation d'événements majeurs, 
+                    2 ans d'expérience dans l'organisation d'événements majeurs, 
                     l'AEMC s'engage à offrir aux étudiants des expériences 
                     mémorables et formatrices.
                   </p>

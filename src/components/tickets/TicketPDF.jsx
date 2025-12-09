@@ -34,7 +34,7 @@ export const generateTicketPDF = async (ticketData, buyerInfo) => {
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(32)
     doc.setFont('helvetica', 'bold')
-    doc.text('MISS FSS 2024', pageWidth / 2, 25, { align: 'center' })
+    doc.text('MISS FSS 2026', pageWidth / 2, 25, { align: 'center' })
     
     doc.setFontSize(14)
     doc.setFont('helvetica', 'normal')
@@ -185,7 +185,7 @@ export const generateTicketPDF = async (ticketData, buyerInfo) => {
     doc.setFontSize(10)
     doc.setFont('helvetica', 'normal')
     doc.setTextColor(50, 50, 50)
-    doc.text('📅 Date: 31 Décembre 2024 à 19h00', pageWidth / 2, yPos, { align: 'center' })
+    doc.text('📅 Date: 24 Janvier 2025 à 18h00', pageWidth / 2, yPos, { align: 'center' })
     
     yPos += 8
     doc.text('📍 Lieu: Faculté des Sciences de Santé, Cotonou', pageWidth / 2, yPos, { align: 'center' })

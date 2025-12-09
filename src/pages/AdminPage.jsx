@@ -76,7 +76,7 @@ const AdminPage = () => {
                   Espace Administrateur
                 </h1>
                 <p className="text-gray-600 text-sm">
-                  Gestion et statistiques Miss FSS 2024
+                  Gestion et statistiques Miss FSS 2026
                 </p>
               </div>
             </div>

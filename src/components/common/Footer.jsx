@@ -24,13 +24,13 @@ const Footer = () => {
       role: 'Développeur Full Stack',
       description: 'Solution digitale professionnelle',
       website: 'https://guilok.dev',
-      email: 'contact@guilok.dev'
+      email: 'olympeguidolokossou@gmail.com'
     },
   ]
 
   const contactInfo = [
     { icon: <Mail size={18} />, text: 'contact@missfss.org', type: 'email' },
-    { icon: <Phone size={18} />, text: '+229 XX XX XX XX', type: 'tel' },
+    { icon: <Phone size={18} />, text: '+229 01 56 03 58 88', type: 'tel' },
     { icon: <MapPin size={18} />, text: 'Faculté des Sciences de Santé, Cotonou', type: 'address' },
   ]
 
@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold">Miss FSS</h3>
-                <p className="text-white/80 text-sm">Édition 2024</p>
+                <p className="text-white/80 text-sm">Édition 2026</p>
               </div>
             </div>
             <p className="text-white/70 mb-6">
@@ -160,8 +160,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-2 text-white/50">
-              <span className="text-sm">Made with</span>
-              <Heart size={14} className="text-accent-400 fill-accent-400" />
+              <span className="text-sm">Made</span>
               <span className="text-sm">by GUI-LOK Dev</span>
             </div>
           </div>

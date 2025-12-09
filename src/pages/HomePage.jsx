@@ -100,7 +100,7 @@ const ceremonyDate = import.meta.env.VITE_EVENT_CEREMONY_DATE || '2026-01-24T18:
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center space-x-2">
                   <Calendar className="text-secondary-300" size={20} />
-                  <span>31 Décembre 2024</span>
+                  <span>24 Janvier 2026</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="text-secondary-300" size={20} />

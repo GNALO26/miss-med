@@ -36,7 +36,7 @@ export const generateTicketPDF = async (ticket, buyerInfo) => {
       doc.setFontSize(24)
       doc.setTextColor(255, 255, 255)
       doc.setFont('helvetica', 'bold')
-      doc.text('MISS FSS 2024', pageWidth / 2, 25, { align: 'center' })
+      doc.text('MISS FSS 2026', pageWidth / 2, 25, { align: 'center' })
       
       doc.setFontSize(16)
       doc.text('SOIRÉE DE GALA & ÉLECTION', pageWidth / 2, 35, { align: 'center' })
@@ -80,7 +80,7 @@ export const generateTicketPDF = async (ticket, buyerInfo) => {
       doc.setFont('helvetica', 'bold')
       doc.text('ÉVÉNEMENT:', margin + 10, yPosition)
       doc.setFont('helvetica', 'normal')
-      doc.text('Élection Miss FSS 2024', margin + 10, yPosition + 7)
+      doc.text('Élection Miss FSS 2026', margin + 10, yPosition + 7)
       doc.text('Faculté des Sciences de Santé', margin + 10, yPosition + 14)
       doc.text('Soirée de Gala & Remise des Prix', margin + 10, yPosition + 21)
       
