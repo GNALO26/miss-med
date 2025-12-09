@@ -14,8 +14,8 @@ const Header = () => {
   const navItems = [
     { name: 'Accueil', path: '/', icon: '' },
     { name: 'Voter', path: '/voting', icon: '' },
-    { name: 'Billetterie', path: '/tickets', icon: '🎫' },
-    { name: 'À Propos', path: '/about', icon: '📖' },
+    { name: 'Billetterie', path: '/tickets', icon: '' },
+    { name: 'À Propos', path: '/about', icon: '' },
   ]
 
   useEffect(() => {
