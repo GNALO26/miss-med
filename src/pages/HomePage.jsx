@@ -84,7 +84,7 @@ const ceremonyDate = import.meta.env.VITE_EVENT_CEREMONY_DATE || '2026-01-24T18:
             >
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <Star size={16} className="text-secondary-300" />
-                <span className="text-sm font-medium">Édition 2024</span>
+                <span className="text-sm font-medium">Édition 2026</span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
