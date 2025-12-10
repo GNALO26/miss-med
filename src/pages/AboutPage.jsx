@@ -4,6 +4,7 @@ import {
   Users, Trophy, Calendar, MapPin, Heart, 
   Star, Target, Award, Globe, Mail, Phone 
 } from 'lucide-react'
+import { ASSET_URLS } from '../services/utils/constants'
 
 const AboutPage = () => {
   const organizers = [
@@ -11,7 +12,7 @@ const AboutPage = () => {
       name: 'AEMC',
       role: 'Organisateur Principal',
       description: 'Association des Étudiants en Médecine de Cotonou',
-      logo: '/logos/aemc-logo.png'
+      logo: ASSET_URLS.LOGOS.AEMC
     }
   ]
 
@@ -20,9 +21,9 @@ const AboutPage = () => {
       name: 'GUI-LOK Dev',
       role: 'Développeur Full Stack',
       description: 'Expert en solutions digitales sur mesure',
-      photo: '/logos/guilok-photo.jpg',
+      photo: ASSET_URLS.LOGOS.DEV_PHOTO,
       website: 'https://guilok.dev',
-      email: 'contact@guilok.dev',
+      email: 'olympeguidolokossou@gmail.com',
       phone: '+229 01 56 03 58 88'
     }
   ]
@@ -44,7 +45,7 @@ const AboutPage = () => {
       icon: <Trophy className="text-accent-600" size={24} />,
       title: 'Édition',
       content: 'Miss FSS 2026',
-      description: '10ème édition'
+      description: 'Édition annuelle'
     },
     {
       icon: <Users className="text-purple-600" size={24} />,
@@ -137,7 +138,7 @@ const AboutPage = () => {
               </p>
 
               <p className="text-gray-700 mb-6">
-                Depuis sa première édition en 2015, Miss FSS est devenu l'événement 
+                Depuis sa première édition, Miss FSS est devenu l'événement 
                 étudiant le plus attendu de l'année. Ce concours met en lumière 
                 des jeunes femmes exceptionnelles qui excellent non seulement dans 
                 leurs études médicales, mais qui sont également engagées dans des 
@@ -182,12 +183,12 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
             {organizers.map((organizer, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
               >
@@ -207,8 +208,8 @@ const AboutPage = () => {
                   </div>
                   <p className="text-gray-700">
                     L'Association des Étudiants en Médecine de Cotonou (AEMC) est 
-                    l'organisation étudiante leader de la faculté. Avec plus de 
-                    2 ans d'expérience dans l'organisation d'événements majeurs, 
+                    l'organisation étudiante leader de la faculté. Avec plusieurs années 
+                    d'expérience dans l'organisation d'événements majeurs, 
                     l'AEMC s'engage à offrir aux étudiants des expériences 
                     mémorables et formatrices.
                   </p>
@@ -244,9 +245,18 @@ const AboutPage = () => {
                   {/* Photo du développeur */}
                   <div className="flex-shrink-0">
                     <div className="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white/20 shadow-xl">
-                      <div className="w-full h-full bg-gradient-to-br from-secondary-500 to-secondary-600 flex items-center justify-center">
-                        <Globe size={64} className="text-white" />
-                      </div>
+                      <img
+                        src={developer.photo}
+                        alt={developer.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.style.display = 'none'
+                          const placeholder = document.createElement('div')
+                          placeholder.className = 'w-full h-full bg-gradient-to-br from-secondary-500 to-secondary-600 flex items-center justify-center'
+                          placeholder.innerHTML = '<svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>'
+                          e.target.parentElement.appendChild(placeholder)
+                        }}
+                      />
                     </div>
                   </div>
 
@@ -277,7 +287,7 @@ const AboutPage = () => {
                           className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
                         >
                           <Globe size={18} />
-                          <span>{developer.website}</span>
+                          <span className="text-sm">guilok.dev</span>
                         </a>
                       )}
                       
@@ -287,7 +297,17 @@ const AboutPage = () => {
                           className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
                         >
                           <Mail size={18} />
-                          <span>{developer.email}</span>
+                          <span className="text-sm">Email</span>
+                        </a>
+                      )}
+
+                      {developer.phone && (
+                        <a
+                          href={`tel:${developer.phone}`}
+                          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
+                        >
+                          <Phone size={18} />
+                          <span className="text-sm">{developer.phone}</span>
                         </a>
                       )}
                     </div>
@@ -298,7 +318,7 @@ const AboutPage = () => {
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <h4 className="font-bold mb-4 text-lg">Technologies utilisées</h4>
                   <div className="flex flex-wrap gap-3">
-                    {['React', 'Node.js', 'Supabase', 'Tailwind CSS', 'KkiaPay', 'Netlify'].map((tech) => (
+                    {['React', 'Vite', 'Supabase', 'Tailwind CSS', 'KkiaPay', 'Netlify'].map((tech) => (
                       <span
                         key={tech}
                         className="px-3 py-1 bg-white/10 rounded-full text-sm"

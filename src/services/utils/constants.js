@@ -5,14 +5,14 @@ export const APP_CONSTANTS = {
   APP_VERSION: '1.0.0',
   
   // Événement
-  EVENT_NAME: 'Miss FSS 2024',
+  EVENT_NAME: 'Miss FSS 2026',
   EVENT_ORGANIZER: 'AEMC - Association des Étudiants en Médecine de Cotonou',
   EVENT_LOCATION: 'Faculté des Sciences de Santé',
   EVENT_CITY: 'Cotonou, Bénin',
   
   // Développeur
   DEVELOPER_NAME: 'GUI-LOK Dev',
-  DEVELOPER_EMAIL: 'contact@guilok.dev',
+  DEVELOPER_EMAIL: 'olympeguidolokossou@gmail.com',
   DEVELOPER_WEBSITE: 'https://guilok.dev',
   
   // Prix
@@ -25,10 +25,11 @@ export const APP_CONSTANTS = {
   },
   
   // Dates
-  EVENT_START_DATE: '2024-12-15T19:00:00',
-  EVENT_END_DATE: '2024-12-31T23:59:59',
-  VOTING_START_DATE: '2024-11-01T00:00:00',
-  VOTING_END_DATE: '2024-12-30T23:59:59',
+  EVENT_START_DATE: '2025-12-15T00:00:00',
+  EVENT_END_DATE: '2026-01-23T23:59:59',
+  EVENT_CEREMONY_DATE: '2026-01-24T18:00:00',
+  VOTING_START_DATE: '2025-12-15T00:00:00',
+  VOTING_END_DATE: '2026-01-23T23:59:59',
   
   // Configuration
   MAX_VOTES_PER_TRANSACTION: 100,
@@ -45,7 +46,7 @@ export const APP_CONSTANTS = {
     FACEBOOK: 'https://facebook.com/missfss',
     INSTAGRAM: 'https://instagram.com/missfss',
     TWITTER: 'https://twitter.com/missfss',
-    WHATSAPP: 'https://wa.me/229XXXXXXXXX'
+    WHATSAPP: 'https://wa.me/22901560358'
   }
 }
 
@@ -240,7 +241,6 @@ export const SUPABASE_CONFIG = {
   }
 }
 
-// URLs des ressources
 // URLs Supabase Storage
 const SUPABASE_STORAGE_URL = 'https://aszyvsnfdmtadjvhhbzs.supabase.co/storage/v1/object/public'
 
@@ -274,33 +274,42 @@ export const ASSET_URLS = {
   }
 }
 
-// Fonction pour obtenir l'URL d'une photo de candidate
+// Fonctions utilitaires pour les URLs
 export const getCandidatePhotoUrl = (candidateNumber) => {
   return `${SUPABASE_STORAGE_URL}/candidates-photos/candidate-${candidateNumber}.jpg`
 }
 
-// Fonction pour obtenir l'URL d'un logo
 export const getLogoUrl = (logoName) => {
   return `${SUPABASE_STORAGE_URL}/logos/${logoName}`
 }
 
-// Fonction pour obtenir l'URL d'un background
 export const getBackgroundUrl = (bgName) => {
   return `${SUPABASE_STORAGE_URL}/backgrounds/${bgName}`
 }
+
 // Fonctions utilitaires
 export const formatCurrency = (amount) => {
+  if (!amount && amount !== 0) return '0 FCFA'
   return new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency: 'XOF',
-    minimumFractionDigits: 0
-  }).format(amount)
+    style: 'decimal',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(amount) + ' FCFA'
 }
 
 export const formatDate = (date, formatStr = 'dd/MM/yyyy HH:mm') => {
-  const { format } = require('date-fns')
-  const { fr } = require('date-fns/locale')
-  return format(new Date(date), formatStr, { locale: fr })
+  try {
+    const d = new Date(date)
+    return d.toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })
+  } catch (error) {
+    return date
+  }
 }
 
 export const generateTransactionId = (prefix = 'TXN') => {
@@ -321,6 +330,7 @@ export const validatePhone = (phone) => {
 }
 
 export const truncateText = (text, length = 100) => {
+  if (!text) return ''
   if (text.length <= length) return text
   return text.substring(0, length) + '...'
 }
@@ -334,6 +344,9 @@ export default {
   KKIAPAY_CONFIG,
   SUPABASE_CONFIG,
   ASSET_URLS,
+  getCandidatePhotoUrl,
+  getLogoUrl,
+  getBackgroundUrl,
   formatCurrency,
   formatDate,
   generateTransactionId,

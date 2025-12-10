@@ -10,27 +10,11 @@ const Footer = () => {
     { name: 'Voter', path: '/voting' },
     { name: 'Billetterie', path: '/tickets' },
     { name: 'À Propos', path: '/about' },
-    { name: 'Conditions', path: '/terms' },
-    { name: 'Confidentialité', path: '/privacy' },
-  ]
-
-  const organizers = [
-    { name: 'AEMC', role: 'Organisateur Principal', description: 'Association des Étudiants en Médecine de Cotonou' },
-  ]
-
-  const developers = [
-    { 
-      name: 'GUI-LOK Dev', 
-      role: 'Développeur Full Stack',
-      description: 'Solution digitale professionnelle',
-      website: 'https://guilok.dev',
-      email: 'olympeguidolokossou@gmail.com'
-    },
   ]
 
   const contactInfo = [
-    { icon: <Mail size={18} />, text: 'contact@missfss.org', type: 'email' },
-    { icon: <Phone size={18} />, text: '+229 01 56 03 58 88', type: 'tel' },
+    { icon: <Mail size={18} />, text: 'contact@missfss.org', type: 'email', link: 'mailto:contact@missfss.org' },
+    { icon: <Phone size={18} />, text: '+229 01 56 03 58 88', type: 'tel', link: 'tel:+2290156035888' },
     { icon: <MapPin size={18} />, text: 'Faculté des Sciences de Santé, Cotonou', type: 'address' },
   ]
 
@@ -92,7 +76,16 @@ const Footer = () => {
               {contactInfo.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <div className="text-secondary-300 mt-0.5">{item.icon}</div>
-                  <span className="text-white/70">{item.text}</span>
+                  {item.link ? (
+                    <a 
+                      href={item.link}
+                      className="text-white/70 hover:text-secondary-300 transition-colors"
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <span className="text-white/70">{item.text}</span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -106,38 +99,42 @@ const Footer = () => {
             </h4>
             
             {/* Organisateurs */}
-            import { ASSET_URLS } from '../../services/utils/constants'
-
-// Dans le JSX, section Développeur (ligne ~107) :
-<div key={index} className="bg-white/5 rounded-lg p-3">
-  <div className="font-medium">{dev.name}</div>
-  <div className="text-sm text-white/60">{dev.role}</div>
-</div>
+            <div className="mb-6">
+              <h5 className="font-semibold text-secondary-300 mb-3 flex items-center space-x-2">
+                <Users size={16} />
+                <span>Organisateur</span>
+              </h5>
+              <div className="bg-white/5 rounded-lg p-3 mb-2">
+                <div className="font-medium text-white">AEMC</div>
+                <div className="text-sm text-white/60">Organisateur Principal</div>
+                <div className="text-xs text-white/50 mt-1">
+                  Association des Étudiants en Médecine de Cotonou
+                </div>
+              </div>
+            </div>
 
             {/* Développeur */}
             <div>
-              <h5 className="font-semibold text-secondary-300 mb-2 flex items-center space-x-2">
+              <h5 className="font-semibold text-secondary-300 mb-3 flex items-center space-x-2">
                 <Globe size={16} />
                 <span>Développement</span>
               </h5>
-              {developers.map((dev, index) => (
-                <div key={index} className="bg-white/5 rounded-lg p-3">
-                  <div className="font-medium">{dev.name}</div>
-                  <div className="text-sm text-white/60">{dev.role}</div>
-                  <div className="text-xs text-white/50 mt-1">{dev.description}</div>
-                  {dev.website && (
-                    <a
-                      href={dev.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-secondary-300 hover:text-secondary-200 text-xs mt-2 inline-flex items-center space-x-1"
-                    >
-                      <Globe size={12} />
-                      <span>Visiter le site</span>
-                    </a>
-                  )}
+              <div className="bg-white/5 rounded-lg p-3">
+                <div className="font-medium text-white">GUI-LOK Dev</div>
+                <div className="text-sm text-white/60">Développeur Full Stack</div>
+                <div className="text-xs text-white/50 mt-1">
+                  Solution digitale professionnelle
                 </div>
-              ))}
+                <a
+                  href="https://guilok.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary-300 hover:text-secondary-200 text-xs mt-2 inline-flex items-center space-x-1"
+                >
+                  <Globe size={12} />
+                  <span>Visiter le site</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -154,8 +151,17 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-2 text-white/50">
-              <span className="text-sm">Made</span>
-              <span className="text-sm">by GUI-LOK Dev</span>
+              <span className="text-sm">Made with</span>
+              <Heart size={14} className="text-red-400" fill="currentColor" />
+              <span className="text-sm">by</span>
+              <a 
+                href="https://guilok.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-secondary-300 hover:text-secondary-200 transition-colors font-medium"
+              >
+                GUI-LOK Dev
+              </a>
             </div>
           </div>
         </div>
