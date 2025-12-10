@@ -106,19 +106,13 @@ const Footer = () => {
             </h4>
             
             {/* Organisateurs */}
-            <div className="mb-6">
-              <h5 className="font-semibold text-secondary-300 mb-2 flex items-center space-x-2">
-                <Users size={16} />
-                <span>Organisateur</span>
-              </h5>
-              {organizers.map((org, index) => (
-                <div key={index} className="bg-white/5 rounded-lg p-3 mb-2">
-                  <div className="font-medium">{org.name}</div>
-                  <div className="text-sm text-white/60">{org.role}</div>
-                  <div className="text-xs text-white/50 mt-1">{org.description}</div>
-                </div>
-              ))}
-            </div>
+            import { ASSET_URLS } from '../../services/utils/constants'
+
+// Dans le JSX, section Développeur (ligne ~107) :
+<div key={index} className="bg-white/5 rounded-lg p-3">
+  <div className="font-medium">{dev.name}</div>
+  <div className="text-sm text-white/60">{dev.role}</div>
+</div>
 
             {/* Développeur */}
             <div>

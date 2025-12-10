@@ -241,17 +241,22 @@ export const SUPABASE_CONFIG = {
 }
 
 // URLs des ressources
+// URLs Supabase Storage
+const SUPABASE_STORAGE_URL = 'https://aszyvsnfdmtadjvhhbzs.supabase.co/storage/v1/object/public'
+
+// URLs des ressources
 export const ASSET_URLS = {
   LOGOS: {
-    AEMC: '/logos/aemc-logo.png',
-    GUI_LOK: '/logos/guilok-logo.png',
-    MISS_FSS: '/logos/miss-fss-logo.png',
-    FSS: '/logos/fss-logo.png'
+    AEMC: `${SUPABASE_STORAGE_URL}/logos/aemc-logo.png`,
+    GUI_LOK: `${SUPABASE_STORAGE_URL}/logos/guilok-logo.png`,
+    MISS_FSS: `${SUPABASE_STORAGE_URL}/logos/miss-fss-logo.png`,
+    FSS: `${SUPABASE_STORAGE_URL}/logos/fss-logo.png`,
+    DEV_PHOTO: `${SUPABASE_STORAGE_URL}/logos/dev-photo.jpg`
   },
   IMAGES: {
-    HERO_BG: '/background/hero-bg.jpg',
-    EVENT_BG: '/background/event-bg.jpg',
-    DEFAULT_CANDIDATE: '/candidates/default.jpg'
+    HERO_BG: `${SUPABASE_STORAGE_URL}/backgrounds/hero-bg.jpg`,
+    EVENT_BG: `${SUPABASE_STORAGE_URL}/backgrounds/event-bg.jpg`,
+    DEFAULT_CANDIDATE: `${SUPABASE_STORAGE_URL}/candidates-photos/default.jpg`
   },
   ICONS: {
     VOTE: '🎯',
@@ -269,6 +274,20 @@ export const ASSET_URLS = {
   }
 }
 
+// Fonction pour obtenir l'URL d'une photo de candidate
+export const getCandidatePhotoUrl = (candidateNumber) => {
+  return `${SUPABASE_STORAGE_URL}/candidates-photos/candidate-${candidateNumber}.jpg`
+}
+
+// Fonction pour obtenir l'URL d'un logo
+export const getLogoUrl = (logoName) => {
+  return `${SUPABASE_STORAGE_URL}/logos/${logoName}`
+}
+
+// Fonction pour obtenir l'URL d'un background
+export const getBackgroundUrl = (bgName) => {
+  return `${SUPABASE_STORAGE_URL}/backgrounds/${bgName}`
+}
 // Fonctions utilitaires
 export const formatCurrency = (amount) => {
   return new Intl.NumberFormat('fr-FR', {
