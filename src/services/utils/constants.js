@@ -276,7 +276,7 @@ export const ASSET_URLS = {
 
 // Fonctions utilitaires pour les URLs
 export const getCandidatePhotoUrl = (candidateNumber) => {
-  return `${SUPABASE_STORAGE_URL}/candidates-photos/candidate-${candidateNumber}.jpg`
+  return `https://aszyvsnfdmtadjvhhbzs.supabase.co/storage/v1/object/public/candidates-photos/candidate-1.jpg`
 }
 
 export const getLogoUrl = (logoName) => {
