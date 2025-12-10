@@ -151,8 +151,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-2 text-white/50">
-              <span className="text-sm">Made with</span>
-              <Heart size={14} className="text-red-400" fill="currentColor" />
+              <span className="text-sm">Made</span>
               <span className="text-sm">by</span>
               <a 
                 href="https://guilok.dev" 
